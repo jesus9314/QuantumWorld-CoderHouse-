@@ -1,0 +1,362 @@
+/*Estilos de reseteo del body*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: sans-serif;
+	color: black;
+	font-size: 20px;
+	background-color: #dfdfdf;
+}
+
+/*Contenedor Principal que centra el contenido*/
+.container {
+	margin: 0 auto;
+	width: 90%;
+}
+
+/*Grid estructura principal*/
+.header {
+	grid-area: header;
+}
+.main {
+	grid-area: main;
+}
+.footerContainer {
+	grid-area: footerContainer;
+}
+.grid {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 7% auto 150px;
+	grid-template-areas:
+		"header"
+		"main"
+		"footerContainer";
+}
+/*Grid estructura principal*/
+
+/*ESTILOS DEL HEADER*/
+.header {
+	background: #06192c;
+	color: white;
+	position: sticky;
+	width: 100%;
+	box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 10px 0px;
+}
+.header h1 {
+	font-size: 2rem;
+	margin: 0px 10px;
+}
+.header a {
+	color: white;
+	text-decoration: none;
+}
+.header a img {
+	height: 70px;
+	display: block;
+}
+
+/*ESTILOS DEL NAV*/
+.menu {
+	height: 100%;
+}
+.menu li {
+	display: inline-block;
+	padding: 8px 16px;
+}
+.menu li a {
+	padding: 8px 16px;
+	height: 100%;
+}
+.menu li a:hover {
+	background: #003c5c;
+	border-bottom: 2px solid black;
+}
+
+/*ESTILOS DE LOS SECCTION*/
+.containerBox {
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px 0px rgba(191, 191, 191, 1);
+	padding: 10px 30px;
+	margin: 30px auto;
+	width: 90%;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: flex-start;
+}
+.containerBox img {
+	height: 80px;
+	width: 110px;
+	margin: 5px auto;
+}
+
+/*Grid Index*/
+.slogan {
+	grid-area: slogan;
+	width: 100%;
+}
+.productos {
+	grid-area: producto1;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+}
+.producto {
+	width: 100%;
+}
+.tutoriales1 {
+	grid-area: tutoriales1;
+	width: 100%;
+}
+.tutoriales2 {
+	grid-area: tutoriales2;
+	width: 100%;
+}
+.tutoriales3 {
+	grid-area: tutoriales3;
+	width: 100%;
+}
+
+.grids {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(7, auto);
+	grid-template-areas:
+		"slogan"
+		"productos"
+		"productos"
+		"productos"
+		"tutoriales1"
+		"tutoriales2"
+		"tutoriales3";
+}
+@media (min-width: 900px) {
+	.grids {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(5, auto);
+		grid-template-areas:
+			"slogan slogan slogan"
+			"producto1 producto2 producto3"
+			"tutoriales1 tutoriales1 tutoriales1"
+			"tutoriales2 tutoriales2 tutoriales2"
+			"tutoriales3 tutoriales3 tutoriales3";
+	}
+	.producto {
+		width: 25%;
+	}
+}
+/*Grid Index*/
+
+/*Grid Productos*/
+.ofertas {
+	grid-area: ofertas;
+}
+.listas-productos {
+	grid-area: productos;
+    display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.gridsp {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas:
+		"productos"
+		"productos"
+		"productos"
+		"ofertas";
+}
+@media (min-width: 900px) {
+	.gridsp {
+		display: grid;
+		grid-template-columns: 20%, 80%;
+		grid-template-rows: repeat(3, auto);
+		grid-template-areas:
+			"ofertas productos"
+			"ofertas productos"
+			"ofertas productos";
+	}
+}
+/*Grid Productos*/
+/*Estilos del pie de página*/
+.footerContainer {
+	background-color: #333;
+	padding: 20px;
+	position: relative;
+}
+
+/*Caja de redes sociales*/
+.social {
+	background: gray;
+	border: solid 1px black;
+	border-radius: 5px;
+	list-style: none;
+	margin: auto;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+}
+.social img {
+	width: 20px;
+}
+.social li {
+	display: inline;
+	margin: 10px 20px;
+}
+.social li a {
+	text-decoration: none;
+	color: white;
+}
+.social li img {
+	width: 20px;
+}
+
+/*Sección de tutoriales*/
+.containerBox a {
+	font-size: small;
+	color: gray;
+	text-decoration: none;
+}
+/*Nosotros*/
+.members {
+	border-radius: 10px;
+	width: 80%;
+}
+
+/*Productos*/
+.model div {
+	display: inline-block;
+}
+.ofertas {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+.ofertas h2 {
+	margin-top: 20px;
+	font-size: 1rem;
+	color: #333;
+}
+.offer {
+	width: 80%;
+	margin: 10px 20px;
+	background: rgb(247, 247, 247);
+	border-radius: 5px;
+	padding: 30px 10px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 5px 5px 5px 0px rgba(191, 191, 191, 1);
+}
+.offer img {
+	width: 140px;
+	border: 1px gray solid;
+	border-radius: 3px;
+	padding: 10px;
+	margin: 5px;
+}
+.offer a {
+	color: black;
+	text-decoration: none;
+	color: gray;
+	margin-top: 10px;
+}
+.offer a:hover {
+	color: black;
+}
+.offer p {
+	color: white;
+}
+
+/*Estilos del título de cada model*/
+#tittle {
+	display: inline-block;
+}
+
+/*Modificamos los elementos de cada tarjeta*/
+.containerBox ul {
+	list-style: none;
+	margin: 20px auto;
+}
+.containerBox ul li {
+	display: inline-block;
+	background: #dcdbdb;
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin: 0px 10px;
+}
+.container ul li a {
+	text-decoration: none;
+	color: #adadad;
+}
+.container ul li a:hover {
+	color: black;
+}
+.container ul li p {
+	color: white;
+}
+/* Contacto*/
+.content {
+	/*Contenedor padre para poder poner en línea los elementos*/
+	overflow: hidden;
+}
+.contet div {
+	display: inline;
+}
+.item {
+	float: left;
+	width: 45%;
+	padding: 15px;
+}
+#contactImg {
+	width: 300px;
+	height: 200px;
+}
+/*Estilos del formulario de contacto*/
+.form {
+	margin: 10px auto;
+	overflow: hidden;
+}
+.form input[type="text"],
+textarea {
+	width: 100%;
+	height: 20px;
+	margin: 5px auto;
+	padding: 5px;
+	box-shadow: inset 5px 5px 5px 0px rgba(0, 0, 0, 0.15);
+	border: solid 1px rgb(185, 185, 185);
+	border-radius: 5px;
+}
+#msg {
+	height: 150px;
+}
+#btnSend {
+	float: right;
+	width: 25%;
+	height: 30px;
+	border-radius: 5px;
+	border: solid 1px gray;
+	background: rgb(219, 219, 219);
+}
+
+/*Proveedores*/
+.prov ul li {
+	display: inline-block;
+	margin: 10px 5px;
+}
