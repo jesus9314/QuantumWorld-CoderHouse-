@@ -40,7 +40,13 @@ body {
 
 /*ESTILOS DEL HEADER*/
 .header {
-	background: #06192c;
+	background: rgba(76,76,76,1);
+	background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76,76,76,1)), color-stop(12%, rgba(89,89,89,1)), color-stop(25%, rgba(102,102,102,1)), color-stop(39%, rgba(71,71,71,1)), color-stop(50%, rgba(44,44,44,1)), color-stop(51%, rgba(0,0,0,1)), color-stop(60%, rgba(17,17,17,1)), color-stop(76%, rgba(43,43,43,1)), color-stop(91%, rgba(28,28,28,1)), color-stop(100%, rgba(19,19,19,1)));
+	background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+	background: -o-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+	background: -ms-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+	background: linear-gradient(to bottom, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
 	color: white;
 	position: sticky;
 	width: 100%;
@@ -83,7 +89,14 @@ body {
 
 /*ESTILOS DE LOS SECCTION*/
 .containerBox {
-	background-color: white;
+	background: rgba(147,206,222,1);
+background: -moz-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(147,206,222,1)), color-stop(41%, rgba(117,189,209,1)), color-stop(100%, rgba(73,165,191,1)));
+background: -webkit-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+background: -o-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+background: -ms-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+background: linear-gradient(to bottom, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=0 );
 	border-radius: 10px;
 	box-shadow: 5px 5px 5px 0px rgba(191, 191, 191, 1);
 	padding: 10px 30px;
@@ -104,6 +117,10 @@ body {
 	grid-area: slogan;
 	width: 100%;
 }
+.slogan:hover{
+	transform: rotateY(360deg);
+	transition: 4s;
+}
 .productos {
 	grid-area: producto1;
 	width: 100%;
@@ -118,13 +135,25 @@ body {
 	grid-area: tutoriales1;
 	width: 100%;
 }
+.tutoriales1:hover{
+	transform: rotateZ(360deg);
+	transition: 2s;
+}
 .tutoriales2 {
 	grid-area: tutoriales2;
 	width: 100%;
 }
+.tutoriales2:hover{
+	transform: scale(0.5,0.5);
+	transition: 2s;
+}
 .tutoriales3 {
 	grid-area: tutoriales3;
 	width: 100%;
+}
+.tutoriales3:hover {
+	transform: skew(20deg,10deg);
+	transition: 2s;
 }
 
 .grids {
@@ -359,4 +388,17 @@ textarea {
 .prov ul li {
 	display: inline-block;
 	margin: 10px 5px;
+}
+/*Animaciones*/
+.animation1:hover{
+	transform: rotate(360deg);
+	transition: 2s;
+}
+.animation2:hover{
+	transform: translate(20px, 20px);
+	transition: 2s;
+}
+.animation3:hover{
+	transform: rotatex(360deg);
+	transition: 2s;
 }
